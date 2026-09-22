@@ -13,6 +13,20 @@ namespace MidtermExam.Prob02
         public LinkedList<int> SortAscending(LinkedList<int> list)
         {
             // TODO: Implement sorting algorithm for LinkedList<int> (Ascending)
+
+            for (int i = 0; i < list.Count - 1; i++) 
+            {
+                int minindex = i;
+                for (int j = i+1; j < list.Count; j++) 
+                {
+                    if (list.Count < minindex)
+                    {
+                        minindex = j;
+                    }
+                }  
+                
+            }
+          
             return list;
         }
 
@@ -24,6 +38,20 @@ namespace MidtermExam.Prob02
         public LinkedList<int> SortDescending(LinkedList<int> list)
         {
             // TODO: Implement sorting algorithm for LinkedList<int> (Descending)
+
+            for (int i = 0; i > list.Count - 1; i++)
+            {
+                int minindex = i;
+                for (int j = i + 1; j > list.Count; j++)
+                {
+                    if (list.Count > minindex)
+                    {
+                        minindex = j;
+                    }
+                }
+
+            }
+
             return list;
         }
     }

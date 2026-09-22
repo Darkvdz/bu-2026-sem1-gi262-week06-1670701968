@@ -50,7 +50,29 @@ namespace MidtermExam.Prob03
         /// <returns>คืนค่า true หากทำการย้ายสำเร็จ หรือ false หากไม่สามารถย้ายได้ (เช่น null, ไม่อยู่ในคิว, ผู้เล่นคนเดียวกัน)</returns>
         public bool SwapQueue(LinkedList<Player> turnQueue, Player targetPlayer, Player afterPlayer)
         {
-            // TODO: ให้นักศึกษา Implement การจัดการสลับลำดับของ Node ใน LinkedList<Player>
+            // TODO: ให้นักศึกษา Implement การจัดการสลับลำดับของ Node ใน LinkedList<Player> 
+
+
+            if (turnQueue == null || targetPlayer == null || afterPlayer == null)
+            {
+                return false;
+            }
+            else
+            {
+                if (turnQueue.Count < 2 || targetPlayer == afterPlayer)
+                {
+                    return false;
+                }
+                else
+                {
+                    turnQueue.Remove(targetPlayer);
+
+                }
+                
+        }
+            //turnQueue.AddFirst(targetPlayer);
+            //targetPlayer = afterPlayer;
+
             return false;
         }
 
